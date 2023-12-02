@@ -11,7 +11,7 @@
 ## Penjelasan
 
 1. **functions.php:**
-Tujuan : Berisi fungsi-fungsi yang berkaitan dengan
+<p>Tujuan : Berisi fungsi-fungsi yang berkaitan dengan</p>
 <p>Fungsi:</p>
 
 - `hill_cipher($text, $key, $mode)`: Melakukan enkripsi atau dekripsi Hill Cipher.
@@ -21,7 +21,7 @@ Tujuan : Berisi fungsi-fungsi yang berkaitan dengan
 - `matrix_inverse($matrix, $mod)`: Menghitung invers matriks 2x2.
 
 2. **hill_cipher.php**
-Tujuan: Memproses input pengguna, melakukan enkripsi atau dekripsi Hill Cipher, dan menyimpan hasilnya dalam database.
+<P>Tujuan: Memproses input pengguna, melakukan enkripsi atau dekripsi Hill Cipher, dan menyimpan hasilnya dalam database.</P>
 <p>Fungsi:</p>
 
 - Terhubung ke basis data.
@@ -30,7 +30,7 @@ Tujuan: Memproses input pengguna, melakukan enkripsi atau dekripsi Hill Cipher, 
 - Memasukkan hasilnya (teks masukan, kunci, mode, hasil) ke dalam tabel `hasil_hill_cipher`.
 
 3. **db_connection.php**
-Tujuan: Membuat koneksi ke database MySQL.
+<p>Tujuan: Membuat koneksi ke database MySQL.</p>
 <p>Fungsi:</p>
 
 - `mysqli_connect()` berfungsi untuk membuat koneksi.
