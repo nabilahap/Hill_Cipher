@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hill Cipher</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #f7f7f7;
+      }
+
+      .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(165, 146, 146, 0.1);
+        background-color: #b9d3de;
+      }
+
+      .card-header {
+        background-color: #375e91;
+        color: #fff;
+        text-align: center;
+        font-size: 24px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .form-control {
+        border: 1px solid #000000;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+
+      .btn-primary {
+        background-color: rgba(32, 53, 82, 0.56);
+        border: none;
+        width: 100%;
+      }
+
+      .btn-primary:hover {
+        background-color: #000b17;
+      }
+
+      a {
+        color: #1c334c;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">
+              Hill Cipher
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="23"
+                fill="currentColor"
+                class="bi bi-code-slash"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"
+                />
+              </svg>
+            </div>
+            <div class="card-body">
+              <form method="post" action="hill_cipher.php">
+                <div class="mb-2">
+                  <h6 class="text-center">Masukkan Plainteks:</h6>
+                  <input
+                    type="text"
+                    class="form-control text-center"
+                    id="text"
+                    name="text"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+                <h6 class="text-center mb-2">Masukkan Key (2 x 2):</h6>
+                <div class="mb-2 d-flex justify-content-center">
+                  <div class="row">
+                    <div class="col-md-6 mb-2">
+                      <input
+                        type="text"
+                        class="form-control text-center"
+                        id="key00"
+                        name="key00"
+                        placeholder=""
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6 mb-2">
+                      <input
+                        type="text"
+                        class="form-control text-center"
+                        id="key01"
+                        name="key01"
+                        placeholder=""
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6 mb-2">
+                      <input
+                        type="text"
+                        class="form-control text-center"
+                        id="key10"
+                        name="key10"
+                        placeholder=""
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6 mb-2">
+                      <input
+                        type="text"
+                        class="form-control text-center"
+                        id="key11"
+                        name="key11"
+                        placeholder=""
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    id="encrypt"
+                    name="mode"
+                    value="encrypt"
+                    checked
+                  />
+                  <label class="form-check-label" for="encrypt">Encrypt</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    id="decrypt"
+                    name="mode"
+                    value="decrypt"
+                  />
+                  <label class="form-check-label" for="decrypt">Decrypt</label>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">
+                  Proses
+                </button>
+              </form>
+              <p class="text-center mt-3"><a href="data.php">Lihat Data.</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"
+      integrity="sha384-LxRHzFGwDA5CfAPQGKpao4QhjNJlnI9l6H5hCR0zOX0w8UbZJJ15EN1uIvt9n6Ed"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
